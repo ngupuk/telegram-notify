@@ -1,0 +1,16 @@
+name: Test
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: ngupuk/telegram-notify@main
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: "@log212"
+          msg: Hello world!
+

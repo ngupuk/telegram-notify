@@ -1,0 +1,20 @@
+name: 'Telegram Notify'
+description: 'Simple Telegram Notification'
+inputs:
+  token:  # id of input
+    description: 'Instagram Bot Token'
+    required: true
+  to:
+    description: 'Telegram Account Receiver'
+    required: true
+  msg: 
+    description: Messages
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.to }}
+    - ${{ inputs.msg }}
