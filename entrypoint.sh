@@ -2,10 +2,10 @@
 
 apk add curl --no-cache
 
-curl \
+curl -s \
     --data-urlencode "chat_id=$2" \
     --data-urlencode "parse_mode=Markdown" \
     --data-urlencode "text=[$GITHUB_REPOSITORY](https://github.com/$GITHUB_REPOSITORY/runs/$GITHUB_RUN_ID): 
-    
-    $3" \
-    https://api.telegram.org/bot$1/sendMessage
+
+$3" \
+    https://api.telegram.org/bot$1/sendMessage > /dev/null
