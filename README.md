@@ -11,7 +11,7 @@ Github Action for sending a Telegram notification message.
 ## Example usage
 
 ```yaml
-- uses: ngupuk/telegram-notify@v1
+- uses: ngupuk/telegram-notify@main
   with:
     token: ${{ secrets.TELEGRAM_TOKEN }}
     to: ${{ secrets.TELEGRAM_TO }}
