@@ -1,7 +1,6 @@
 #!/bin/sh -l
 
-apk add curl --no-cache
-
+echo "Sending message..."
 curl -s \
     --data-urlencode "chat_id=$2" \
     --data-urlencode "parse_mode=Markdown" \
@@ -9,3 +8,4 @@ curl -s \
 
 $3" \
     https://api.telegram.org/bot$1/sendMessage > /dev/null
+echo "Done!"
